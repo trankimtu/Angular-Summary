@@ -1,46 +1,56 @@
-# Angular-Summary
-
-## VS Code Package
+# VS Code Package
 Auto Import
 
-## Installation
-
-### Node Package Manager
+# Node Package Manager
 ```
 sudo apt install npm
 ```
 
-### Node js
+# Node js
 https://nodejs.org/en/download/
 
-### Angular CLI
+# Install Typescript
+```
+npm install -g typescript
+```
+
+# Angular CLI
 ```
 npm install -g @angular/cli
 ```
-### Check version
+
+# Check version
 ```
 ng --version
 npm --version / npm -v / npm -version
+tsc -v / tsc --version
 ```
 
-## Command
-
-### Install all package from exist project
+# Install all package from exist project
 ```
 npm install
 ```
 
-### Run app
+# Run
 ```
+Node <file.js>
+tsc.ts | node main.js
 ng serve
+
 ```
 
-### Create new project
+# Create new project
 ```
 ng new <Project Name>
 ```
 
-### Create new component
+# Create new component
 ```
 ng g c <Component Name>
 ```
+
+# Install bootstrap
+```
+npm install bootstrap --save 
+```
+
