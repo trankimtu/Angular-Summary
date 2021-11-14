@@ -53,4 +53,19 @@ ng g c <Component Name>
 ```
 npm install bootstrap --save 
 ```
+src/style.css
+```
+@import "~bootstrap/dist/css/bootstrap.css";
+```
 
+# Install bootstrap icon
+```
+npm i bootstrap-icons
+or
+npm i bootstrap-icons --save
+```
+src/style.css
+```
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+```
