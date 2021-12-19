@@ -49,6 +49,11 @@ ng new <Project Name>
 ng g c <Component Name>
 ```
 
+# Create new pipe 
+```
+ng g p <pipe-name>
+```
+  
 # Install bootstrap
 ```
 npm install bootstrap --save 
