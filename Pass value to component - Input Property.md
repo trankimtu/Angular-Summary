@@ -2,6 +2,7 @@
 ```
 <like [is-like] = "post.isLike"></like>
 ```
+<!-- ====================================================== -->
 
 # app.component.ts
 ```
@@ -20,6 +21,7 @@ export class AppComponent {
   }
 }
 ```
+<!-- ====================================================== -->
 
 # Like.component.html
 ```
@@ -30,6 +32,7 @@ export class AppComponent {
     (click) = onClick();
 ></i>
 ```
+<!-- ====================================================== -->
 
 # like.component.ts
 ```
@@ -41,12 +44,9 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./like.component.css']
 })
 export class LikeComponent implements OnInit {
-
   constructor() { }
-
   ngOnInit(): void {
   }
-
 
   @Input('is-like') isLike = false;
 
