@@ -58,6 +58,7 @@ ng g p <pipe-name>
 ```
 npm install bootstrap --save 
 ```
+
 src/style.css
 ```
 @import "~bootstrap/dist/css/bootstrap.css";
@@ -74,3 +75,5 @@ src/style.css
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
 ```
+## Bootstrap icons
+https://icons.getbootstrap.com/
