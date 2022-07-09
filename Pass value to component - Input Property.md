@@ -48,7 +48,7 @@ export class LikeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @Input('is-like') isLike = false;
+  @Input('is-like') isLike : boolean | undefined;
 
   onClick() {
     this.isLike = !this.isLike;
