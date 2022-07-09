@@ -1,0 +1,58 @@
+# app.component.html
+```
+<like [is-like] = "post.isLike"></like>
+```
+
+# app.component.ts
+```
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  
+  post = {
+    isLike : false,
+    likeCount : 10
+  }
+}
+```
+
+# Like.component.html
+```
+<i 
+    class="bi"
+    [class.bi-heart] = "!isLike"
+    [class.bi-heart-fill] = "isLike"
+    (click) = onClick();
+></i>
+```
+
+# like.component.ts
+```
+import { Component, Input, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'like',
+  templateUrl: './like.component.html',
+  styleUrls: ['./like.component.css']
+})
+export class LikeComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+
+  @Input('is-like') isLike = false;
+
+  onClick() {
+    this.isLike = !this.isLike;
+  }
+}
+```
+
