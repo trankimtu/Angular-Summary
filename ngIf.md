@@ -1,3 +1,7 @@
+Courses array empty will show “No courses yet”
+Courses array not empty will show “List of courses”
+
+
 # app.component.ts
 ```
 import { Component } from '@angular/core';
