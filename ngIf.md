@@ -1,5 +1,5 @@
-Courses array empty will show “No courses yet”
-Courses array not empty will show “List of courses”
+1. Courses array empty will show “No courses yet”
+2. Courses array not empty will show “List of courses”
 
 
 # app.component.ts
