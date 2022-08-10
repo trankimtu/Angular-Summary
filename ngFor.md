@@ -112,3 +112,76 @@ export class AppComponent {
   </li>
 </ul>
 ```
+# 4. ngFor and TrackBy
+## File: app.component.ts
+```
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  courses: any ;
+
+  loadCourses() {
+    this.courses = [
+      { id: 1, name: 'course1'},
+      { id: 2, name: 'course2'},
+      { id: 3, name: 'course3'},
+    ];
+  }
+}
+```
+## File: app.component.
+```
+<button (click)="loadCourses()">Load Courses</button>
+
+<ul>
+  <li *ngFor="let course of courses">
+    {{ course.name }}
+  </li>
+</ul>
+```
+Open browser inspect (F12), Every time button is clicked, the course list is loaded (reconstruction) to different memory location with the same value.<br>
+TrackBy use to improve performance of the web page. If we load the same object to display on the page, TrackBy will skip loading it.<br>
+Don’t need to use it for small object because we cannot see the different.<br>
+Only use it for large object.<br>
+
+## File: app.component.ts
+```
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  courses: any ;
+
+  loadCourses() {
+    this.courses = [
+      { id: 1, name: 'course1'},
+      { id: 2, name: 'course2'},
+      { id: 3, name: 'course3'},
+    ];
+  }
+
+  trackCourse(course: any) {
+    return course ? course.id : undefined;
+
+  }
+}
+```
+# File: app.component.html
+```
+<button (click)="loadCourses()">Load Courses</button>
+
+<ul>
+  <li *ngFor="let course of courses; TrackBy: trackCourse">
+    {{ course.name }}
+  </li>
+</ul>
+```
