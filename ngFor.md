@@ -1,4 +1,4 @@
-1. Export value index of the array to alias local valuable i 
+# 1. Export value index of the array to alias local valuable i 
 # File: app.component.ts
 ```
 import { Component } from '@angular/core';
@@ -24,7 +24,7 @@ export class AppComponent {
   </li>
 </ul>
 ```
-2. Beside index, there are many other value we can export
+# 2. Beside index, there are many other value we can export
 Visit angular.io, search for “ngForOf”. Select “D(Directive) NgForOf”
 [https://angular.io/api/common/NgForOf](https://angular.io/api/common/NgForOf)
 •	index: number: The index of the current item in the iterable.
