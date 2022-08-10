@@ -1,5 +1,5 @@
 # 1. Export value index of the array to alias local valuable i 
-# File: app.component.ts
+## File: app.component.ts
 ```
 import { Component } from '@angular/core';
 
@@ -16,7 +16,7 @@ export class AppComponent {
    ];
 }
 ```
-# File: app.component.html 
+## File: app.component.html 
 ```
 <ul>
   <li *ngFor="let course of courses; index as i">
@@ -33,7 +33,7 @@ Visit angular.io, search for “ngForOf”. Select “D(Directive) NgForOf”
 •	last: boolean: True when the item is the last item in the iterable.
 •	even: boolean: True when the item has an even index in the iterable.
 •	odd: boolean: True when the item has an odd index in the iterable.
-# File: app.component.ts
+## File: app.component.ts
 ```
 import { Component } from '@angular/core';
 
@@ -50,7 +50,7 @@ export class AppComponent {
    ];
 }
 ```
-# File: app.component.html 
+## File: app.component.html 
 ```
 <ul>
   <li *ngFor="let course of courses; index as i">
@@ -67,6 +67,48 @@ export class AppComponent {
 <ul>
   <li *ngFor="let course of courses; odd as isOdd">
     {{ course.name }} <span *ngIf="isOdd">(ODD)</span>
+  </li>
+</ul>
+```
+# 3. ngFor and Change Detection
+## File: app.component.ts
+```
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  courses = [
+  { id: 1, name: 'course1'},
+  { id: 2, name: 'course2'},
+  { id: 3, name: 'course3'},
+  ];
+
+  onAdd() {
+  this.courses.push({ id: 4, name: 'course4'});
+  }
+
+  onRemove(course: { id: number; name: string; }) {
+  let index = this.courses.indexOf(course);
+  this.courses.splice(index, 1);
+  }
+  onChange(course: {id: number; name: string; }) {
+    course.name = "UPDATED";
+  }
+}
+```
+## File: app.component.html 
+```
+<button (click)="onAdd()">Add</button>
+
+<ul>
+  <li *ngFor="let course of courses; index as i">
+    {{ i }} - {{ course.name }}
+    <button (click)="onRemove(course)">Remove</button>
+    <button (click)="onChange(course)">Change</button>
   </li>
 </ul>
 ```
