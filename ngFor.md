@@ -88,12 +88,12 @@ export class AppComponent {
   ];
 
   onAdd() {
-  this.courses.push({ id: 4, name: 'course4'});
+    this.courses.push({ id: 4, name: 'course4'});
   }
 
   onRemove(course: { id: number; name: string; }) {
-  let index = this.courses.indexOf(course);
-  this.courses.splice(index, 1);
+    let index = this.courses.indexOf(course);
+    this.courses.splice(index, 1);
   }
   onChange(course: {id: number; name: string; }) {
     course.name = "UPDATED";
