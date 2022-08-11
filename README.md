@@ -53,6 +53,11 @@ ng g c <Component Name>
 ```
 ng g p <pipe-name>
 ```
+
+# Create new directive
+```
+ng g d <directive name>
+```
   
 # Install bootstrap
 ```
