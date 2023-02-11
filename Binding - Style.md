@@ -10,7 +10,6 @@ import { Component } from '@angular/core';
 })
 
 export class CoursesComponent {
-  // isActive = false;
   isActive = true;
 }
 ```
