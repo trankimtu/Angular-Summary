@@ -73,11 +73,11 @@ Can't bind to 'colspan' since it isn't a known property of 'td'.
 ```
 In this case, use “attr” to target colSpan attribute of markup:
 ```
-    <table>
-      <tr>
-        <td [attr.colspan]="colSpan"></td>
-      </tr>
-    </table>
+<table>
+  <tr>
+    <td [attr.colspan]="colSpan"></td>
+  </tr>
+</table>
 ```
 
 
