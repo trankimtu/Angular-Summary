@@ -42,12 +42,13 @@ export class CoursesComponent {
 
 
 # Attribute Binding
-DOM (Document Object Model) is a model of object that represent the structure of a document. It’s a tree of object in memory.<br>
-HTLM is markup language that is used to represent DOM in text.<br>
-When using binding, make sure we bind the property of the DOM object, not attribute of HTML element.<br>
-Most of attribute of HTML element has 1 to 1 mapping to property of DOM object.<br>
-There’re some exception such that HTML attribute does not have the representation in the DOM (DOM object does not have property “colspan”) and vice versa, property of DOM does not have representation in HTML (property textContent of h1 does not have representation in DOM). <br> 
-
+<ul>
+    <li>DOM (Document Object Model) is a model of object that represent the structure of a document. It’s a tree of object in memory.</li>
+    <li>HTLM is markup language that is used to represent DOM in text.</li>
+    <li>When using binding, make sure we bind the property of the DOM object, not attribute of HTML element.</li>
+    <li>Most of attribute of HTML element has 1 to 1 mapping to property of DOM object.</li>
+    <li>There’re some exception such that HTML attribute does not have the representation in the DOM (DOM object does not have property “colspan”) and vice versa, property of DOM does not have representation in HTML (property textContent of h1 does not have representation in DOM).</li>
+</ul>
 ```
 import { Component } from '@angular/core';
 @Component ({
