@@ -49,6 +49,7 @@ export class CoursesComponent {
     <li>Most of attribute of HTML element has 1 to 1 mapping to property of DOM object.</li>
     <li>There’re some exception such that HTML attribute does not have the representation in the DOM (DOM object does not have property “colspan”) and vice versa, property of DOM does not have representation in HTML (property textContent of h1 does not have representation in DOM).</li>
 </ul>
+
 ```
 import { Component } from '@angular/core';
 @Component ({
