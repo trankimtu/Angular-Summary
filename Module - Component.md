@@ -32,3 +32,45 @@ export class CoursesComponent {
 }
 ```
 
+### Step 2: Register the component in a module
+<ul>
+  <li>In src/app/app.module.ts, add CourseComponent module.</li>
+  <li>Name of import module is the name of the file without extension. This will be added automatically by “auto import” package of vs code. If not, install package “auto import”</li>
+  <li>Missing register component cause error: ‘causes’ is not a known element</li>
+</ul>
+
+```
+// file: app.module.ts 
+
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+
+import { CoursesComponent } from './courses.component'; // import component class
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    CoursesComponent //Register new component
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+```
+
+### Step 3: Add an element in an HTML markup
+```
+<!-- file: app.component.html -->
+
+<h1>Angular</h1>
+<courses></courses>
+
+```
