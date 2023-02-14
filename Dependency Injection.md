@@ -75,7 +75,7 @@ Passing the parameter service type CoursesService to constructor, Angular will c
 Angular will automatically create a parameter type CoursesService then pass it around constructor if needed.<br>
 Later on, if we change the constructor such as pass a parameter to it, we don’t have to modify all the places where constructor appears. <br>
 We need to instruct Angular create an instance type CoursesService and pass it around the constructor. This concept is called Dependency Injection.<br>
-Dependency instructor mean providing or injecting the dependency of a class into constructor<br>
+Dependency injection mean providing or injecting the dependency of a class into constructor<br>
 Angular has dependency injection framework built in. To register dependent, in app.module.ts, add all dependent in providers.<br>
 In this case, we add CoursesService as providers in this model.<br>
 If we have hundreds component use CoursesService, the only 1 CoursesService is created. This is singleton<br>
