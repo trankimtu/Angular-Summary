@@ -56,10 +56,10 @@
 
   ```
   ## Step 2: Code what the pipe does
-  In summary.pipe.ts
-  Get 1st 50 character then …
-  ? after args means optional
-  If value is empty, null, undefine will return null
+  In summary.pipe.ts<br>
+  Get 1st 50 character then …<br>
+  ? after args means optional<br>
+  If value is empty, null, undefine will return null<br>
   value.substr(0, 50) + ‘…’ : get 1st 50 characcter then add … after that
   ```
   import { Pipe, PipeTransform } from '@angular/core';
