@@ -1,4 +1,5 @@
-# File: app.component.ts
+# Class Binding
+## File: app.component.ts
 ```
 import { Component } from '@angular/core';
 
@@ -9,7 +10,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   isSelected = false;
-
   
   onClick() {
     this.isSelected = !this.isSelected;
@@ -17,7 +17,7 @@ export class AppComponent {
   }
 }
 ```
-# File: app.component.html
+## File: app.component.html
 ```
 <i
   class="bi"
@@ -29,7 +29,7 @@ export class AppComponent {
 ```
 
 # Instead use class binding twice, we can use ngClass directive
-# File: app.component.html
+## File: app.component.html
 ```
 <i
   class="bi"
