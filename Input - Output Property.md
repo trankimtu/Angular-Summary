@@ -37,3 +37,6 @@ In template, we bind field ```isFavorite``` of favorite component to ```post.isF
 ```
 
 ### Aliasing Input Property
+The code above, parameter in html must be the same with the field in component.<br>
+
+
