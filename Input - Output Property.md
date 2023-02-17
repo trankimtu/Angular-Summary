@@ -4,6 +4,16 @@ Public API (Application Programming Interface) of a component:
 
 # Input property
 In this example, we want to pass ```post.isFavorite``` in ```app.component.ts``` which got from server to the favorite component by binding it to ```isFavorite``` parameter in ```favorite.component.ts``` parameter of the component<br>
+```
+  // File: app.component.ts
+  // Suppose this post object we get from the server
+  // We will display the icon base on post.isFavorite value
+  post = {
+    title: "Title",
+    isFavorite: false
+  }
+
+```
 Inside the component, using @Input mark field property as input property which makes it available to bind from outside
 ```
 // file: favorite.component.ts
