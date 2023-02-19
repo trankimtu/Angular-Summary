@@ -46,6 +46,23 @@ In template, we bind field ```isFavorite``` of favorite component to ```post.isF
 <favorite [isFavorite]="post.isFavorite"></favorite>
 ```
 
+Favorite component template
+```
+<!-- file: favorite.component.html -->
+<!-- 
+    Render [class.bi-star-fill] whenever isFavorite is true
+    Render [class.bi-star]      whenever isFavorite is false
+    handle click event
+ -->
+<i
+    class="bi"
+    [class.bi-star-fill] = "isFavorite" 
+    [class.bi-star] = "!isFavorite"
+    (click)="onClick()"
+>
+</i>
+
+```
 ### Aliasing Input Property
 The code above, parameter in html must be the same with the field in component.<br>
 
