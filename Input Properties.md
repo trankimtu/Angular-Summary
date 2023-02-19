@@ -63,7 +63,7 @@ Favorite component template
 </i>
 
 ```
-### Aliasing Input Property
+# Aliasing Input Property
 Benefit: Alias keep contract of component stable
 In the code above, the parameter in ```app.component.html``` and ```favorite.component.ts``` must have same name ```isFavorite```.<br>
 If we want template parameter has different name such as ```is-favorite```, this name is not allow in js, Aliase get involved <br>
