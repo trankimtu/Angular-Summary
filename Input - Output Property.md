@@ -64,6 +64,64 @@ Favorite component template
 
 ```
 ### Aliasing Input Property
-The code above, parameter in html must be the same with the field in component.<br>
+In the code above, the parameter in ```app.component.html``` and ```favorite.component.ts``` must have same name ```isFavorite```.<br>
+If we want template parameter has different name such as ```is-favorite```, this name is not allow in js, Aliase get involved <br>
 
+In template, we use alias ```is-favorite``` for the field ```isFavorite``` of favorite component and bind it to ```post.isFavorite``` which is  got from database
+```
+<!-- File: app.component.html -->
+<favorite [is-favorite]="post.isFavorite"></favorite>
+```
+
+Nothing change in app.component.ts
+```
+  // File: app.component.ts
+  // Suppose this post object we get from the server
+  // We will display the icon base on post.isFavorite value
+  post = {
+    title: "Title",
+    isFavorite: false
+  }
+
+```
+In ```component.ts``` Passing template parameter to ```@IInput()``` method to make aliase
+```
+// file: favorite.component.ts
+import { Component, OnInit, Input } from '@angular/core';
+
+@Component({
+  selector: 'favorite',
+  templateUrl: './favorite.component.html',
+  styleUrls: ['./favorite.component.css']
+})
+export class FavoriteComponent implements OnInit {
+
+  @Input('is-favorite') isSelected = false;
+  
+  constructor() { }
+  ngOnInit(): void {
+  }
+  
+  onClick() {
+    this.isSelected = !this.isSelected;
+  }
+}
+
+```
+
+Nothing change in Favorite component template
+```
+<!-- file: favorite.component.html -->
+<!-- 
+    Render [class.bi-star-fill] whenever isFavorite is true
+    Render [class.bi-star]      whenever isFavorite is false
+    handle click event
+ -->
+<i
+    class="bi"
+    [class.bi-star-fill] = "isFavorite" 
+    [class.bi-star] = "!isFavorite"
+    (click)="onClick()"
+>
+</i>
 
