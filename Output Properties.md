@@ -151,7 +151,7 @@ export class AppComponent {
 }
 ```
 <!-- =========================================================================================== -->
-Inside the component, pass an object ```{ newValue: this.isSelected }``` to emit in ```onClick()``` method
+Inside the component, pass an object ```{ newValue: this.isFavorite }``` to emit in ```onClick()``` method
 ```
 // file: favorite.component.ts
 
