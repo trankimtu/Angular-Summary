@@ -182,3 +182,73 @@ In template we pass ```$evnet``` to ```onFavoriteChanged()``` method
 <!-- File: app.component.html -->
 <favorite [is-favorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></favorite>
 ```
+
+
+<!-- =========================================================================================== -->
+<!-- =========================================================================================== -->
+<!-- =========================================================================================== -->
+
+# Passsing an object to a raising event - Better the code buy using interface
+In this example, we raise an event ```change``` and pass an object to it
+
+We better keep the interface declaring object in ```favorite.component.ts``` and use it in ```app.component.ts```.
+
+```
+// File: app.component.ts
+import { Component } from '@angular/core';
+import { FavoriteChangedEventArgs } from './favorite/favorite.component';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  post = {
+    title: "Title",
+    isFavorite: false
+  }
+
+  onFavoriteChanged(eventArgs:FavoriteChangedEventArgs) {
+    console.log("Favorite Changed: ", eventArgs.newValue);
+  }
+} 
+
+```
+<!-- =========================================================================================== -->
+Inside the component, pass an object ```{ newValue: this.isFavorite }``` to emit in ```onClick()``` method
+Export the interface to use in ```app.component.ts```
+```
+// file: favorite.component.ts
+
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
+@Component({
+  selector: 'favorite',
+  templateUrl: './favorite.component.html',
+  styleUrls: ['./favorite.component.css']
+})
+export class FavoriteComponent implements OnInit {
+
+  @Input(is-favorite) isFavorite = false;
+  @Output() change = new EventEmitter();
+  constructor() { }
+  ngOnInit(): void {
+  }
+  
+  onClick() {
+    this.isFavorite = !this.isFavorite;
+    this.change.emit( { newValue: this.isFavorite } );
+  }
+}
+
+export interface FavoriteChangedEventArgs {
+  newValue: boolean
+}
+```
+<!-- =========================================================================================== -->
+In template we pass ```$evnet``` to ```onFavoriteChanged()``` method
+```
+<!-- File: app.component.html -->
+<favorite [is-favorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></favorite>
+```
