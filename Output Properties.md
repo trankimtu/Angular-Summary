@@ -27,7 +27,7 @@ export class AppComponent {
 ```
 Inside the component, using @Output to raise event<br>
 import ```output``` and ```Eventemitter```<br>
-Set event ```change`` = ```new EventEmitter()```<br>
+Set event ```change``` = ```new EventEmitter()```<br>
 ```
 // file: favorite.component.ts
 
