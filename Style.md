@@ -48,6 +48,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 ```
 
 ## Style application order
-Style in favorite.component.html will 1st priority<br>
-In the clip, which one come last on favorite.component.ts will be 2nd priority. Angular pick one style and ignore whatever in other style<br>
-My case, style in favorite.component.ts is 2nd priority doesn’t matter it come before or after styleUrls. Angular match all the style together. The same style will be overwrited by other.
+Style in ```favorite.component.html``` will 1st priority<br>
+In the clip, which one come last on ```favorite.component.ts``` will be 2nd priority.<br>
+Angular pick one style and ignore whatever in other style<br>
+My case, style in ```favorite.component.ts``` is 2nd priority doesn’t matter it come before or after styleUrls. Angular match all the style together. The same style will be overwrited by other.
