@@ -252,3 +252,41 @@ In template we pass ```$evnet``` to ```onFavoriteChanged()``` method
 <!-- File: app.component.html -->
 <favorite [is-favorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></favorite>
 ```
+
+<!-- =========================================================================================== -->
+<!-- =========================================================================================== -->
+<!-- =========================================================================================== -->
+
+# Aliasing Output Properties
+Benefit: Alias keep contract of component stable<br>
+In ```favorite.component.ts``` suppose we change output event name to ```click```, adding parameter ```'change'``` to ```Output()``` to make an output alias
+```
+// file: Favorite.component.ts
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
+@Component({
+  selector: 'favorite',
+  templateUrl: './favorite.component.html',
+  styleUrls: ['./favorite.component.css']
+})
+export class FavoriteComponent implements OnInit {
+
+  @Input('is-favorite') isSelected = false;
+  @Output('change') click = new EventEmitter();
+  constructor() { }
+  ngOnInit(): void {
+  }
+  
+  onClick() {
+    this.isSelected = !this.isSelected;
+
+    // Pass an object
+    this.click.emit({ newValue: this.isSelected });
+  }
+}
+
+export interface FavoriteChangedEventArgs {
+  newValue: boolean
+}
+```
+
