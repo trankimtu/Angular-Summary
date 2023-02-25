@@ -1,6 +1,6 @@
 # Style in Angular
 3 ways to apply styles for a component<br>
-## 1st way: Use the stileUrls
+## 1st way: Use the styleUrls
 ```
 /* file: favorite.component.css */
 .bi {
@@ -8,7 +8,7 @@
     background-color: yellow;
 }
 ```
-## 2nd way: in decorator
+## 2nd way: Use style properties in decorator
 ```
 // file: Favorite.component.ts
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
@@ -27,7 +27,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   ]
 })
 ```
-## 3rd way: inline html template
+## 3rd way: html template
 ```
 /* file: favorite.component.html */
 <style>
