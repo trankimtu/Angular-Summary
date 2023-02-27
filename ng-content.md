@@ -29,3 +29,19 @@ Using component in ```app.component.html``` and define the filled in content
   </div>
 </bootstrap-panel>
 ```
+
+The code will be the same with:
+```
+<!-- File: bootstrap-panel.component.html  -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="heading">Heading</div> 
+    </div>
+    <div class="panel-body">
+        <div class="body">
+            <h2>Body</h2>
+            <p>Some Content here</p>
+        </div>
+    </div>
+</div>
+```
