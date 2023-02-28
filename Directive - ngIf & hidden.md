@@ -45,7 +45,7 @@ Condition ```courses.length > 0``` can be a boolean method<br>
 ```
 
 # Hidden
-Use hidden property to hide the div. When add ```hidden``` property to the ```div```, that ```div``` is hidden <br>
+Use hidden property to hide a ```div```. When add ```hidden``` property to the ```div```, that ```div``` is hidden <br>
 The code bellow only show "No courses yet"
 ```
 <div hidden>
