@@ -7,6 +7,7 @@ There's 2 type of directives:
 
 # ngIf
 In this example, we will modify the structure of the DOM by adding or removing one DOM element.<br>
+Benefit: If we are not going to show large element trees, ```ngIf``` will take it out of the DOM. This will save resource
 Use ```*``` for structure directive<br>
 We will show or hide part of a page depending on some conditions:<br>
 1. Courses array empty will show “No courses yet”<br>
