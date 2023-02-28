@@ -4,7 +4,7 @@ There's 2 type of directives:
 1. Structure directive: Modify the structure of the DOM
 2. Attribute directive: Modify the attributes of DOM elements.
 <br>
-In this example, we will show or hide part of a page depending on some conditions<br>
+In this example, we will show or hide part of a page depending on some conditions:
 1. Courses array empty will show “No courses yet”
 2. Courses array not empty will show “List of courses”
 
