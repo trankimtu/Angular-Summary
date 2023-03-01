@@ -59,7 +59,7 @@ The code bellow only show "No courses yet"
 </div>
 ```
 
-Hidden property only hide the DOM but not take it out. This takes resource because both ```div``` still there. 
+Hidden property only hide the DOM but not take it out. This takes resource because both ```div``` still there.<br>
 Benefit in small element tree or hidden ```div``` which is going to show up when raise event.
 
 ```
