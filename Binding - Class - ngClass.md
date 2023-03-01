@@ -31,7 +31,7 @@ export class AppComponent {
 ```
 
 # Instead use class binding twice, we can use ngClass directive
-Using ```key``` as class and ```value``` as value
+Using ```key``` represent class and ```value``` as value<br>
 This is an example of attribute directive which uses to modify attribute of an existing DOM element
 ```
 <!-- File: app.component.html -->
