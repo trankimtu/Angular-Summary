@@ -7,9 +7,9 @@ There's 2 type of directives:
 
 # ngIf
 In this example, we will modify the structure of the DOM by adding or removing one DOM element.<br>
-Benefit: If we are not going to show large element trees, ```ngIf``` will take it out of the DOM. This will save resource
+Benefit: If we are not going to show large element trees, ```ngIf``` will take it out of the DOM. This will save resource<br>
 Use ```*``` for structure directive<br>
-We will show or hide part of a page depending on some conditions:<br>
+We will show or not show part of a page depending on some conditions:<br>
 1. Courses array empty will show “No courses yet”<br>
 2. Courses array not empty will show “List of courses”
 
@@ -46,7 +46,8 @@ Condition ```courses.length > 0``` can be a boolean method<br>
 ```
 
 # Hidden
-Use hidden property to hide a ```div```. When add ```hidden``` property to the ```div```, that ```div``` is hidden <br>
+Use hidden property to hide a ```div```.<br>
+Adding ```hidden``` property to the ```div```, that ```div``` is hidden <br>
 The code bellow only show "No courses yet"
 ```
 <div hidden>
@@ -58,8 +59,8 @@ The code bellow only show "No courses yet"
 </div>
 ```
 
-Using hidden, both div is exist in the DOM. This takes resource
-Benefit for small element tree or hidden ```div``` which is show up when raise event.
+Hidden property only hide the DOM but not take it out. This takes resource because both ```div``` still there. 
+Benefit in small element tree or hidden ```div``` which is going to show up when raise event.
 
 ```
 // File: app.component.ts
