@@ -1,4 +1,4 @@
-
+# Style binding
 ```
 import { Component } from '@angular/core';
 
@@ -16,8 +16,8 @@ export class CoursesComponent {
 
 
 
-# File: app.component.ts
 ```
+// File: app.component.ts
 import { Component } from '@angular/core';
 
 @Component({
@@ -30,8 +30,8 @@ export class AppComponent {
 }
 ```
 
-# File: app.component.html
 ```
+<!-- File: app.component.html -->
 <button
   [style.backgroundColor]="canSave ? 'blue' : 'gray'"
   [style.color]="canSave ? 'white' : 'black'"
@@ -40,9 +40,11 @@ export class AppComponent {
   save
 </button>
 ```
-# In the template, we can use ngStyle and result is still the same
-# File: app.component.html
+# ngStyle
+Normally we encapsulate style in css file. Some situations need inline css, we can use this.
+Jason with ```key``` represent css style, ```value``` is value
 ```
+<!-- File: app.component.html -->
 <button
   [ngStyle]="{
     'backgroundColor': canSave ? 'blue' : 'gray',
