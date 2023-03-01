@@ -1,6 +1,7 @@
-
-Use class binding for "active" <br>
-Click method call function and define viewMode in that function. However, the function has only one line so we in line it here. Do not need to create a method for this. <br>
+# ngSwitchCase
+In this example, we build a nav bar
+Use class binding for "active" tab<br>
+Click method call function to define ```viewMode``` in that function. However, the function has only one line so we in line it here. Do not need to create a method for this. <br>
 In the tag ```<div *ngSwitchCase="'map'">``` : “  ” for directive,  ‘   ’ for value map as a string <br>
 
 # File: app.component.ts
