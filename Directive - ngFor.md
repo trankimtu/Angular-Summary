@@ -101,8 +101,8 @@ export class AppComponent {
   }
 
   onRemove(course: { id: number; name: string; }) {
-    let index = this.courses.indexOf(course);
-    this.courses.splice(index, 1);
+    let index = this.courses.indexOf(course); <<<< Find index of object course in array courses
+    this.courses.splice(index, 1); <<<<< Go to that index and remove 1 object
   }
   onChange(course: {id: number; name: string; }) {
     course.name = "UPDATED";
