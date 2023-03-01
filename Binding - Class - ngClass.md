@@ -1,6 +1,6 @@
 # Class Binding
-## File: app.component.ts
 ```
+// File: app.component.ts
 import { Component } from '@angular/core';
 
 @Component({
@@ -17,8 +17,10 @@ export class AppComponent {
   }
 }
 ```
-## File: app.component.html
+
+
 ```
+<!-- File: app.component.html -->
 <i
   class="bi"
   [class.bi-star-fill] = "isSelected" 
@@ -29,8 +31,10 @@ export class AppComponent {
 ```
 
 # Instead use class binding twice, we can use ngClass directive
-## File: app.component.html
+Using ```key``` as class and ```value``` as value
+This is an example of attribute directive which uses to modify attribute of an existing DOM element
 ```
+<!-- File: app.component.html -->
 <i
   class="bi"
   [ngClass]="{
