@@ -1,4 +1,5 @@
-# 1. Export value index of the array to alias local valuable i 
+# 1. Display Array Value with Index
+Export value index of the array to alias local valuable i 
 ## File: app.component.ts
 ```
 import { Component } from '@angular/core';
@@ -24,7 +25,7 @@ export class AppComponent {
   </li>
 </ul>
 ```
-# 2. Beside index, there are many other value we can export
+## Beside index, there are many other value we can export
 Visit angular.io, search for “ngForOf”. Select “D(Directive) NgForOf”<br>
 [https://angular.io/api/common/NgForOf](https://angular.io/api/common/NgForOf)<br>
 •	index: number: The index of the current item in the iterable.<br>
@@ -33,8 +34,8 @@ Visit angular.io, search for “ngForOf”. Select “D(Directive) NgForOf”<br
 •	last: boolean: True when the item is the last item in the iterable.<br>
 •	even: boolean: True when the item has an even index in the iterable.<br>
 •	odd: boolean: True when the item has an odd index in the iterable.<br>
-## File: app.component.ts
 ```
+// File: app.component.ts
 import { Component } from '@angular/core';
 
 @Component({
@@ -50,8 +51,9 @@ export class AppComponent {
   ];
 }
 ```
-## File: app.component.html 
+Instead of out put string ```(EVEN)``` we can set style for it
 ```
+<!-- File: app.component.html  -->
 <ul>
   <li *ngFor="let course of courses; index as i">
     {{ i }} - {{ course.name }}
@@ -70,9 +72,16 @@ export class AppComponent {
   </li>
 </ul>
 ```
-# 3. ngFor and Change Detection
-## File: app.component.ts
+
+<!--  ==========================================================================================  -->
+<!--  ==========================================================================================  -->
+<!--  ==========================================================================================  -->
+
+# 2. ngFor and Change Detection
+The code bellow allows modifing the array by adding item, removing item, or change item's value.
+
 ```
+// File: app.component.ts
 import { Component } from '@angular/core';
 
 @Component({
@@ -100,8 +109,10 @@ export class AppComponent {
   }
 }
 ```
-## File: app.component.html 
+
+
 ```
+<!-- File: app.component.html  -->
 <button (click)="onAdd()">Add</button>
 
 <ul>
@@ -112,7 +123,7 @@ export class AppComponent {
   </li>
 </ul>
 ```
-# 4. ngFor and TrackBy
+# 3. ngFor and TrackBy
 ## File: app.component.ts
 ```
 import { Component } from '@angular/core';
