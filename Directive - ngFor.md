@@ -123,9 +123,15 @@ export class AppComponent {
   </li>
 </ul>
 ```
+
+<!--  ==========================================================================================  -->
+<!--  ==========================================================================================  -->
+<!--  ==========================================================================================  -->
+
 # 3. ngFor and TrackBy
-## File: app.component.ts
+Button ```Load Courses``` call method ```loadCourses()```
 ```
+// File: app.component.ts
 import { Component } from '@angular/core';
 
 @Component({
@@ -145,8 +151,9 @@ export class AppComponent {
   }
 }
 ```
-## File: app.component.
+
 ```
+<!-- File: app.component. -->
 <button (click)="loadCourses()">Load Courses</button>
 
 <ul>
@@ -156,12 +163,13 @@ export class AppComponent {
 </ul>
 ```
 Open browser inspect (F12), Every time button is clicked, the course list is loaded (reconstruction) to different memory location with the same value.<br>
-TrackBy use to improve performance of the web page. If we load the same object to display on the page, TrackBy will skip loading it.<br>
+By default, Angular track object by its memory location.
+To skip loading the same object again, TrackBy is used. This improves performance of the web page.<br>
 Don’t need to use it for small object because we cannot see the different.<br>
 Only use it for large object.<br>
 
-## File: app.component.ts
 ```
+// File: app.component.ts
 import { Component } from '@angular/core';
 
 @Component({
@@ -186,8 +194,9 @@ export class AppComponent {
   }
 }
 ```
-# File: app.component.html
+Add TrackBy with the name of method
 ```
+<!-- File: app.component.html -->
 <button (click)="loadCourses()">Load Courses</button>
 
 <ul>
