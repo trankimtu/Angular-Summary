@@ -1,4 +1,6 @@
-Use custom directive to have more control over behavior of DOM element. We can pass data to the directive using input property. <br>
+Use custom directive to have more control over behavior of DOM element. <br>
+For example, controlling input field to modify phone number from 1234567890 to (123)456-7890 or capital name in the field.
+We can pass data to the directive using input property. <br>
  
 Create new directive by cli: 
 ```
@@ -7,12 +9,18 @@ ng g d input-format
 It will create 2 files: <br>
 	- Unit test file <br>
 	- Directive file <br>
-The command also modify app.module.ts. Inside declaration, it adds InputFormatDirective
+The command also modify app.module.ts. Inside declaration, it adds InputFormatDirective<br>
+(All components, pipes, and directive must register in Declarations array unless we will have run time error)
 
-# Select input box, console will output “on Focus”. Unselect input box, console will output “on Blur”
 
-## File: input-formatCurrency.directive.ts 
+# Example 1
+Select input box, console will output “on Focus”. Unselect input box, console will output “on Blur”<br>
+In decorator function, selector is in ```[ ]```<br>
+```focus``` and ```blur``` are 2 DOM events
+```@HostListener('')``` need to pass a DOM event in
 ```
+// File: input-formatCurrency.directive.ts 
+
 import { formatCurrency } from '@angular/common';
 import { Directive, HostListener } from '@angular/core';
 
@@ -29,14 +37,17 @@ export class InputFormatDirective {
   constructor() { }
 }
 ```
-## File: app.component.html
+Add ```appInputFormat``` attribute to the template<br>
+It will apply custom directive to the input field
+
 ```
+<!-- File: app.component.html -->
 <input type="text" appInputFormat>
 ```
 
 # Turn all letter inside input box to lower case when the input box is not selected.
-## File: input-formatCurrency.directive.ts 
 ```
+// File: input-formatCurrency.directive.ts 
 import { Directive, HostListener, ElementRef } from '@angular/core';
 
 @Directive({
@@ -52,8 +63,8 @@ export class InputFormatDirective {
   }
 }
 ```
-## File: app.component.html 
 ```
+<!-- File: app.component.html  -->
 <input type="text" appInputFormat>
 ```
 
@@ -61,8 +72,8 @@ export class InputFormatDirective {
 In case we have multi format, one place is lower case, another place is upper case. <br>
 To tell the directive about the target format, we use input property
 
-## File: input-formatCurrency.directive.ts 
 ```
+// File: input-formatCurrency.directive.ts 
 import { Directive, HostListener, ElementRef, Input } from '@angular/core';
 
 @Directive({
@@ -84,8 +95,8 @@ export class InputFormatDirective {
   }
 }
 ```
-## File: app.component.html 
 ```
+<!--  File: app.component.html  -->
 <input type="text" appInputFormat [format]="'uppercase'">
 <input type="text" appInputFormat [format]="'lowercase'">
 ```
