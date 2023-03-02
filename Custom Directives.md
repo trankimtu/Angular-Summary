@@ -45,7 +45,11 @@ It will apply custom directive to the input field
 <input type="text" appInputFormat>
 ```
 
-# Turn all letter inside input box to lower case when the input box is not selected.
+# Example 2
+Turn all letter inside input field to lower case when click outside of input field.
+Use ```blur```
+in ```onBlur()``` get value of input field. To do that, in constructor we inject element reference object. This is service which defines in Anguler give us access to DOM object by nativeElement property<br>
+
 ```
 // File: input-formatCurrency.directive.ts 
 import { Directive, HostListener, ElementRef } from '@angular/core';
@@ -58,8 +62,8 @@ export class InputFormatDirective {
   constructor(private el: ElementRef) { }
 
   @HostListener('blur') onBlur() {
-    let value: string = this.el.nativeElement.value;
-    this.el.nativeElement.value = value.toLowerCase();
+    let value: string = this.el.nativeElement.value; // Get value of input field then assign to value parameter
+    this.el.nativeElement.value = value.toLowerCase(); // Set value of input field equal to value.toLowerCase()
   }
 }
 ```
