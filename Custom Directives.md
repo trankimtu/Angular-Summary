@@ -72,7 +72,7 @@ export class InputFormatDirective {
 <input type="text" appInputFormat>
 ```
 
-# Multiformat
+# Example 4 - Multiformat
 In case we have multi format, one place is lower case, another place is upper case. <br>
 To tell the directive about the target format, we use input property
 
@@ -107,10 +107,15 @@ export class InputFormatDirective {
 Input “uppercase” to the leftbox, it will automatically change to “UPPERCASE” when the box is unselected <br>
 Input “LOWERCASE” to the right box, result will be “lowercase”
 
-# Use input property for directive when there's only 1 format
-When we have only one input property which is uppercase, we will set the format to apply to the directive
-## File: input-formatCurrency.directive.ts 
+# Use input property for directive
+In the code above, we apply directive as attribute. Then use property binding to set the target format
 ```
+<input type="text" appInputFormat [format]="'uppercase'">
+```
+Since we have only one input property which is uppercase, It would be nicer to set the taraget format while apply the directive as an attribute<br>
+Alias the selector ```appInputFormat``` in ts file
+```
+// File: input-formatCurrency.directive.ts 
 import { Directive, HostListener, ElementRef, Input } from '@angular/core';
 
 @Directive({
@@ -132,8 +137,9 @@ export class InputFormatDirective {
   }
 }
 ```
-## File: app.component.html 
+Bind it to string ```'uppercase'```
 ```
+<!-- File: app.component.html  -->
 <input type="text" [appInputFormat]="'uppercase'">
 ```
 
