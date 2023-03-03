@@ -14,6 +14,10 @@
 
 
 # Service
+- Decouple element with reusable service
+- Normal class, no decorator
 
-
+# Dependency Injection
+- Passing parameter type service to constructor
+- Register in ```provider``` of ```app.module.ts```
 
