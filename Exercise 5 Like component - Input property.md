@@ -1,3 +1,11 @@
+Implement a heart shape like button with number of like count<br>
+Click to the heart, it's turn from ```#ccc``` to ```deeppink``` and increase like count 1<br>
+Click to the heard again, it's turn back to ```#ccc``` and decrease like count 1<br>
+Technique:
+- Interpolation
+- Class binding
+- Input property - pass isLiked status and likeCount to like component
+
 # like.component.css
 ```
 .bi {
