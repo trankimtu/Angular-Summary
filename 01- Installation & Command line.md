@@ -27,6 +27,12 @@ npm --version / npm -v / npm -version
 tsc -v / tsc --version
 ```
 
+# Update
+Only update that project, not global
+```
+ng update @angular/cli
+```
+
 # Install all package from exist project
 ```
 npm install
