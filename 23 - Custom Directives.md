@@ -49,9 +49,14 @@ It will apply custom directive to the input field
 ```
 
 # Example 2
-Turn all letter inside input field to lower case when click outside of input field.
-Use ```blur```
-in ```onBlur()``` get value of input field. To do that, in constructor we inject element reference object. This is service which defines in Anguler give us access to DOM object by nativeElement property<br>
+Turn all letter inside input field to lower case when click outside of input field.<br>
+import ```ElementRef``` to reference DOM element which is used to get and set value of the input field. Declare one in constructor for later using. ```nativeElement``` is built in Angular object allow us to access to DOM object<br>
+```@HostListener('blur')``` listen to event NOT focus of the input field. When the input field is NOT on focus, it will raise an event which call method ```onBlur()```<br>
+Method ```onBlur()``` does 2 job:
+<ol>
+	<li>Get value of input field then assign to ```value``` parameter</li>
+	<li>Set value of input field equal to ```value.toLowerCase()```</li>
+</ol>
 
 ```
 // File: input-formatCurrency.directive.ts 
