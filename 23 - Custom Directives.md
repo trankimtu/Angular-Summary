@@ -122,7 +122,7 @@ In the code above, we apply directive as attribute. Then use property binding to
 ```
 <input type="text" appInputFormat [format]="'uppercase'">
 ```
-Since we have only one input property which is uppercase, It would be nicer to set the taraget format while apply the directive as an attribute<br>
+Since we have only one input property which is uppercase, It would be nicer to set the target format while apply the directive as an attribute<br>
 Alias the selector ```appInputFormat``` in ts file
 ```
 // File: input-formatCurrency.directive.ts 
