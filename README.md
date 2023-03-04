@@ -38,7 +38,7 @@
 - Register NgModule in ```imports``` array of ```app.module.ts```
 - [( ngModel )]
 
-# Pipe
+# 10 - Pipe
 - Built in pipe
 <ul>
   <li>Uppercase</li>
@@ -94,3 +94,9 @@
 # Leading Asterisk
 - Explain how the code does behind the scene when using ```*``` such as ```*ngIf```
 
+# Safe Traversal Operator - Null Prevent
+- It's not possible to display Null value. Preventing this by traversal Operator
+
+# Custom Directive
+
+# Exercise 6  - Zippy
