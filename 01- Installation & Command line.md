@@ -21,6 +21,7 @@ npm install -g @angular/cli
 
 # Check version
 ```
+ng version
 ng --version
 npm --version / npm -v / npm -version
 tsc -v / tsc --version
