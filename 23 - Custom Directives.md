@@ -82,7 +82,7 @@ It will apply custom directive to the input field
 <input type="text" appInputFormat>
 ```
 
-# Example 4 - Multiformat
+# Example 3 - Multiformat
 In case we have multi format, one place is lower case, another place is upper case. <br>
 To tell the directive about the target format, we use input property
 
