@@ -18,8 +18,8 @@ Select input box, console will output “on Focus”. Unselect input box, consol
 In decorator function, selector is in ```[ ]```<br>
 ```focus``` and ```blur``` are 2 DOM events
 ```@HostListener('')``` need to pass a DOM event in<br>
-```@HostListener('focus')``` listen to event focus of the input field. When the input field is on focus, it will raise an event which call method ```onFocus()```
-```@HostListener('blur')``` listen to event NOT focus of the input field. When the input field is NOT on focus, it will raise an event which call method ```onBlur()```
+```@HostListener('focus')``` listen to event focus of the input field. When the input field is on focus, it will raise an event which call method ```onFocus()```<br>
+```@HostListener('blur')``` listen to event NOT focus of the input field. When the input field is NOT on focus, it will raise an event which call method ```onBlur()```<br>
 
 ```
 // File: input-formatCurrency.directive.ts 
