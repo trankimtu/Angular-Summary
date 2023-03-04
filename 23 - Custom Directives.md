@@ -75,6 +75,8 @@ export class InputFormatDirective {
   }
 }
 ```
+Add ```appInputFormat``` attribute to the template<br>
+It will apply custom directive to the input field
 ```
 <!-- File: app.component.html  -->
 <input type="text" appInputFormat>
