@@ -1,23 +1,23 @@
-# 01 Installation & Command line
+# 01 - Installation & Command line
 - Angular setup
 - VS Code package
 - Useful command 
 
-# 02 Module - Component
+# 02 - Module - Component
 - Introduce Module and Component
 - 3 Steps create a component
 - Create component by CLI (See Installation $ Command line)
 
-# 03 Binding - String Interpolation - Property - Attribute
+# 03 - Binding - String Interpolation - Property - Attribute
 - String Interpolation
 - Property binding
 - Attribute binding
 
-# 04 Service
+# 04 - Service
 - Decouple element with reusable service
 - Normal class, no decorator
 
-# 05 Dependency Injection
+# 05 - Dependency Injection
 - Passing parameter type service to the constructor
 - Register in ```provider``` of ```app.module.ts```
 
