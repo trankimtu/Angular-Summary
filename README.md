@@ -1,15 +1,26 @@
-# Installation & Command line
+# 01 Installation & Command line
 - Angular setup
 - VS Code package
-- Most useful command 
+- Useful command 
 
-# Module - Component
+# 02 Module - Component
+- Introduce Module and Component
 - 3 Steps create a component
 - Create component by CLI (See Installation $ Command line)
 
-# Binding - String Interpolation - Property - Attribute
-- String Interpolation
+# 03 Binding - String Interpolation - Property - Attribute
+- String Interpolation ``` template: '<h2>{{ title }}</h2>'```
 - Property binding
+  ```
+  template: `
+      
+      <h2> {{ title }}</h2>      
+      <h2 [textContent]="title"></h2>
+      
+      <img src="{{ imageUrl }}" />
+      <img [src]="imageUrl" />
+  `
+  ```
 - Attribute binding
 
 
