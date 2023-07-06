@@ -9,31 +9,16 @@
 - Create component by CLI (See Installation $ Command line)
 
 # 03 Binding - String Interpolation - Property - Attribute
-- String Interpolation ``` template: '<h2>{{ title }}</h2>'```
+- String Interpolation
 - Property binding
-  ```
-      <h2> {{ title }}</h2>      
-      <h2 [textContent]="title"></h2>
-      
-      <img src="{{ imageUrl }}" />
-      <img [src]="imageUrl" />
-  ```
 - Attribute binding
-  ```
-      <table>
-        <tr>
-          <td [attr.colspan]="colSpan"></td>
-        </tr>
-      </table>
-  ```
 
-
-# Service
+# 04 Service
 - Decouple element with reusable service
 - Normal class, no decorator
 
-# Dependency Injection
-- Passing parameter type service to constructor
+# 05 Dependency Injection
+- Passing parameter type service to the constructor
 - Register in ```provider``` of ```app.module.ts```
 
 # Adding bootstrap
