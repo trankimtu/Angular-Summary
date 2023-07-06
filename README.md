@@ -12,16 +12,20 @@
 - String Interpolation ``` template: '<h2>{{ title }}</h2>'```
 - Property binding
   ```
-  template: `
-      
       <h2> {{ title }}</h2>      
       <h2 [textContent]="title"></h2>
       
       <img src="{{ imageUrl }}" />
       <img [src]="imageUrl" />
-  `
   ```
 - Attribute binding
+  ```
+      <table>
+        <tr>
+          <td [attr.colspan]="colSpan"></td>
+        </tr>
+      </table>
+  ```
 
 
 # Service
