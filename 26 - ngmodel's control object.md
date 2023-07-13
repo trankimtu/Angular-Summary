@@ -1,6 +1,7 @@
 # ngModel's control object
 
 ### File: app.module.ts
+In the app.module.ts, import FormsModule
 ```
 imports: [
   BrowserModule,
