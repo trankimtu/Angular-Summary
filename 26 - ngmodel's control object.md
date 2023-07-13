@@ -71,7 +71,10 @@ export class ContactFormComponent {
 ```
 ### Control: FormControl
 <ul>  
-  <li> ```Dirty```  Value of input field is changed – Typing name in the input field make ```dirty``` = true </li>
+  <li> 
+    
+    ```Dirty```  Value of input field is changed – Typing name in the input field make ```dirty``` = true 
+  </li>
   <li> ```Pristine``` Clean – Value of input field is NOT changed - Typing name in the input field make ```pristine = false``` </li>
   <li>```Touch``` click to input field and move the mouse away make the input field focused and unfocused. This makes ```touch = true```</li>
   <li>```Untouch``` = false in the case above</li>
