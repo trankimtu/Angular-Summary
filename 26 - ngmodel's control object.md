@@ -14,9 +14,9 @@ imports: [
 <contact-form></contact-form>
 ```
 ### File: contact-form.component.html
-Missing the name attribute will cause the error: 
--> If ngModel is used within a form tag, either the name attribute must be set or the form control must be defined as 'standalone' in ngModelOptions <be>
--> It happens because it needs a way to distinguish these control objects when we have more than 1 input using ngModel <be>
+Missing the name attribute will cause the error: <be>
+-> If ngModel is used within a form tag, either the name attribute must be set or the form control must be defined as 'standalone' in ngModelOptions <br>
+-> It happens because it needs a way to distinguish these control objects when we have more than 1 input using ngModel <br>
 We will show the control object of ngModel in the console. To do that, we make a template parameter ```#firstName``` and set it to ```ngModel``` value then raise an event to pass it to the log method <br>
 
 ```
