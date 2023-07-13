@@ -1,7 +1,7 @@
 # ngModel's control object
 
+### File: app.module.ts
 ```
-// File: app.module.ts
 imports: [
   BrowserModule,
   AppRoutingModule,
@@ -9,8 +9,8 @@ imports: [
 ],
 ```
 
+### File: app.component.html
 ```
-<!-- File: app.component.html -->
 <contact-form></contact-form>
 ```
 ### File: contact-form.component.html
@@ -20,7 +20,6 @@ Missing the name attribute will cause the error:
 We will show the control object of ngModel in the console. To do that, we make a template parameter ```#firstName``` and set it to ```ngModel``` value then raise an event to pass it to the log method <br>
 
 ```
-<!-- File: contact-form.component.html -->
 <form>
     <div class="form-group">
         <label for="firstName">First Name</label>
@@ -50,10 +49,8 @@ We will show the control object of ngModel in the console. To do that, we make a
 
 ```
 
-
-
+### File: contact-form.component.ts 
 ```
-// File: contact-form.component.ts 
 import { Component, OnInit } from '@angular/core';
 
 @Component({
