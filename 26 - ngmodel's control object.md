@@ -77,6 +77,7 @@ export class ContactFormComponent {
   <li>Untouch = false in the case above</li>
   <li>Valid</li>
   <li>Invalid</li>
+  <li>error: when validation is false, error shows here</li>
 </ul>
 
 
