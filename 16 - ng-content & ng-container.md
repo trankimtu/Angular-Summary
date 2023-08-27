@@ -1,7 +1,7 @@
 # ng-content
 Using ng-content to fill out template dynamically<br>
-Content under class “heading” in File: ```app.component.html``` will replace the code ```<ng-content select=".heading"></ng-content>``` in File: ```bootstrap-panel.component.html```<br>
-Content under class “ body” in File: ```app.component.html``` will replace the code ```<ng-content select=".body"></ng-content> in File: bootstrap-panel.component.html```
+Content under class “heading” including ```div``` tag in File: ```app.component.html``` will replace the code ```<ng-content select=".heading"></ng-content>``` in File: ```bootstrap-panel.component.html```<br>
+Content under class “ body” including ```div``` tag in File: ```app.component.html``` will replace the code ```<ng-content select=".body"></ng-content> in File: bootstrap-panel.component.html```
 
 
 In component template, use ```ng-content select``` to set what need to fill in
@@ -51,7 +51,7 @@ The code will be the same with:
 <!-- ============================================================================ -->
 
 # ng-container
-Similar to ```ng-content```, but ```ng-container``` just take the value ```Heading``` inside the tag ```<div class="heading">Heading</div> <br>
+Similar to ```ng-content```, but ```ng-container``` just take the value ```Heading``` inside the tag ```<div class="heading">Heading</div>``` <br>
 In component template, use ```ng-content select``` to set what need to fill in
 ```
 <!-- File: bootstrap-panel.component.html  -->
