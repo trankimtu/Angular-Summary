@@ -51,7 +51,7 @@ The code will be the same with:
 <!-- ============================================================================ -->
 
 # ng-container
-Similar to ```ng-content```, but ```ng-container``` just take the value ```Heading``` inside the tag ```<div class="heading">Heading</div>``` <br>
+Similar to ```ng-content```, but ```ng-container``` just take the value ```Heading``` inside the tag ```<div class="heading">Heading</div>``` Without taking ```<div>``` tag <br>
 In component template, use ```ng-content select``` to set what need to fill in
 ```
 <!-- File: bootstrap-panel.component.html  -->
