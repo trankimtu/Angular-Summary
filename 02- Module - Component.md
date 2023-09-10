@@ -5,6 +5,15 @@
   <li>Inside App module there can be many modules, each of them responds to each area of the application such as Courses module, Messaging module, Instructor module, and Admin module</li>
 </ul>
 
+### Step 1: Create a module
+
+```
+  ng g m <module name>
+  or
+  ng generate module <module name>
+```
+A folder ```<module name>``` with the file ```<module name>.module.ts>``` is created
+
 # Component
 Every Angular has a tree component start with Root component (App component)<br>
 ## 3 steps create component:
