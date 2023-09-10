@@ -51,6 +51,10 @@ ng serve
 ng new <Project Name>
 ```
 
+# Create new module
+```
+ng g m <Module Name>
+```
 # Create new component
 ```
 ng g c <Component Name>
