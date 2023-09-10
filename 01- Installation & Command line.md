@@ -52,6 +52,7 @@ ng new <Project Name>
 ```
 
 # Create new module
+Inside app folder
 ```
 ng g m <Module Name>
 ```
