@@ -13,6 +13,12 @@
   ng generate module <module name>
 ```
 A folder ```<module name>``` with the file ```<module name>.module.ts>``` is created
+### Step 2: Register ```<module name>``` in ```app.module.ts```
+
+
+
+
+
 
 # Component
 Every Angular has a tree component start with Root component (App component)<br>
