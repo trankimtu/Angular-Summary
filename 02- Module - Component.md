@@ -14,7 +14,13 @@
 ```
 A folder ```<module name>``` with the file ```<module name>.module.ts>``` is created
 ### Step 2: Register ```<module name>``` in ```app.module.ts```
-
+In ```app.module.ts```
+```
+  import {} from './<module name>/<module name>.module'
+  imports[
+    <module name>.module,
+  ]
+```
 
 
 
