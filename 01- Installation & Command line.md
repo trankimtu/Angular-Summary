@@ -50,7 +50,10 @@ ng serve
 ```
 ng new <Project Name>
 ```
-
+# Create project npm error - No matching version found for ...
+```
+  npm cache clean --force
+```
 # Create new module
 Inside app folder
 ```
