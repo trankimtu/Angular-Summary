@@ -78,6 +78,11 @@ ng g p <pipe-name>
 ```
 ng g d <directive name>
 ```
+
+# Create new interface
+```
+ng g i <interface name>
+```
   
 # Install bootstrap
 ```
