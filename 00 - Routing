@@ -4,7 +4,7 @@ Import app-routing.module
 import { AppRoutingModule } from './app-routing.module';
 
 ```
-<u>File becomes:</u>
+File becomes:
 ```
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
