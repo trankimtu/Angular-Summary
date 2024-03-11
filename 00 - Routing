@@ -1,7 +1,7 @@
 # A. File app.module.ts
 Import app-routing.module
 ```
-import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
 
 ```
 File becomes:
