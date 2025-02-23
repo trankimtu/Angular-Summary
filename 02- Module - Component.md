@@ -27,6 +27,8 @@ In ```app.module.ts```
 
 
 # Component
+Angular 14 and above can use standalone and don't need app.module.ts<br>
+
 Every Angular has a tree component start with Root component (App component)<br>
 ## 3 steps create component:
 
