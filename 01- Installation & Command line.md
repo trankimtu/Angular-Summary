@@ -48,7 +48,7 @@ ng serve
 
 # Create new project
 ```
-ng new <Project Name>
+ng new <Project Name> // --dry-run no changes were made
 ```
 # Create project npm error - No matching version found for ...
 ```
