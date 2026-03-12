@@ -9,6 +9,14 @@ sudo apt install npm
 # Node js
 https://nodejs.org/en/download/
 
+```
+update (1) node by download new node
+```
+update(2) npm (system-wide)
+```
+npm install -g npm@latest
+```
+
 # Install Typescript
 ```
 npm install -g typescript
@@ -17,6 +25,10 @@ npm install -g typescript
 # Angular CLI
 ```
 npm install -g @angular/cli
+```
+update (3) to newest version
+```
+npm install -g @angular/cli@latest
 ```
 
 # Check version
