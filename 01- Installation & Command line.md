@@ -5,17 +5,30 @@ Auto Import
 ```
 sudo apt install npm
 ```
-
-# Node js
-https://nodejs.org/en/download/
-
-```
-update (1) node by download new node
-```
-update(2) npm (system-wide)
+# Update project to newest version
+Update node -> Download new node
+Update npm
 ```
 npm install -g npm@latest
 ```
+Update Angular CLI (Global)
+```
+npm install -g @angular/cli@latest
+```
+Install project dependencies
+```
+npm install
+```
+Update Angular to the newest major version
+```
+ng update @angular/core@latest @angular/cli@latest
+```
+Update all Angular-related packages
+```
+ng update --all
+```
+# Node js
+https://nodejs.org/en/download/
 
 # Install Typescript
 ```
