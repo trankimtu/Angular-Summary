@@ -100,3 +100,39 @@
 # Custom Directive
 
 # Exercise 6  - Zippy
+
+# IIS Host
+
+```
+ng build --configuration production
+```
+Copy "browser" folder content to customer-ui
+Modify index.html
+```
+<base href="/customer-ui/">
+```
+IIS Manager > right click to customer-ui convert to application
+web.comfig
+```
+<configuration>
+  <system.webServer>
+    <rewrite>
+      <rules>
+        <rule name="AngularRoutes" stopProcessing="true">
+          <match url=".*" />
+          <conditions>
+            <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+            <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+          </conditions>
+          <action type="Rewrite" url="index.html" />
+        </rule>
+      </rules>
+    </rewrite>
+  </system.webServer>
+</configuration>
+```
+
+
+
+
+
